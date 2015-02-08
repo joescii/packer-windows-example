@@ -1,0 +1,33 @@
+{
+  "variables": {
+    "timestamp": null,
+    "aws_access_key": null,
+    "aws_secret_key": null
+  },
+  "builders": [
+    {
+      "type": "amazon-windows-ebs",
+      "region": "us-east-1",
+      "source_ami": "ami-f298ea9a",
+      "instance_type": "t1.micro",
+      "user_data_file": "setup.ps1",
+      "winrm_username": "vagrant",
+      "winrm_password": "FooBar@123",
+      "winrm_wait_timeout": "30m",
+      "access_key": "{{ user `aws_access_key` }}",
+      "secret_key": "{{ user `aws_secret_key` }}",
+      "ami_name": "ami-exp-portal-dev-adi-convertor-{{user `timestamp`}}",
+      "tags": {
+        "Timestamp": "{{user `timestamp`}}"
+      }
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "powershell",
+      "inline": [
+        "wevtutil qe system"
+      ]
+    }
+  ]
+}
