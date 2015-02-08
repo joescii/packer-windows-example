@@ -13,10 +13,10 @@
       "user_data_file": "setup.ps1",
       "winrm_username": "vagrant",
       "winrm_password": "FooBar@123",
-      "winrm_wait_timeout": "30m",
+      "winrm_wait_timeout": "10m",
       "access_key": "{{ user `aws_access_key` }}",
       "secret_key": "{{ user `aws_secret_key` }}",
-      "ami_name": "ami-exp-portal-dev-adi-convertor-{{user `timestamp`}}",
+      "ami_name": "ami-windows-example-{{user `timestamp`}}",
       "tags": {
         "Timestamp": "{{user `timestamp`}}"
       }
@@ -28,6 +28,11 @@
       "inline": [
         "wevtutil qe system"
       ]
+    },
+    {
+      "type": "file",
+      "source": "LICENSE",
+      "destination": "C:\\Users\\vagrant\\Desktop\\LICENSE.txt"
     }
   ]
 }
