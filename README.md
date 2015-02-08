@@ -13,6 +13,7 @@ I'm just a happy customer.
 4. Leave the test commands default (i.e. none).
 5. Select _Custom Script_ for Deployment.
 6. Enter this as your script:
+
   ```shell
   chmod 700 ./build.sh
   ./build.sh
