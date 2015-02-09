@@ -27,5 +27,8 @@ It will spit out a bunch of XML from [this powershell command](https://github.co
 Then it will [upload the LICENSE](https://github.com/joescii/packer-windows-example/blob/master/packer.json#L33-L35) to show that we touched the AMI.
 You can re-run this build as often as you like in the codeship console without pushing more changes.
 
+## This Branch
+In this branch, I am trying to set the WinRM port to 80.
+
 ## Current Build Status
-[ ![Codeship Status for joescii/packer-windows-example](https://codeship.com/projects/8ad05190-91ef-0132-a852-4ad5c42ca09f/status?branch=master)](https://codeship.com/projects/61776)
+[ ![Codeship Status for joescii/packer-windows-example](https://codeship.com/projects/8ad05190-91ef-0132-a852-4ad5c42ca09f/status?branch=port-80)](https://codeship.com/projects/61776)
