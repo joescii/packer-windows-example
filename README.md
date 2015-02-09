@@ -29,6 +29,7 @@ You can re-run this build as often as you like in the codeship console without p
 
 ## This Branch
 In this branch, I am trying to set the WinRM port to 80.
+The security group is hard-coded to one with a wide-open port 80, because at the moment the temporary security group created by packer does not use our port configuration.
 
 ## Current Build Status
 [ ![Codeship Status for joescii/packer-windows-example](https://codeship.com/projects/8ad05190-91ef-0132-a852-4ad5c42ca09f/status?branch=port-80)](https://codeship.com/projects/61776)
